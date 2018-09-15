@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Weather Application</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="Js/script.js"> </script>
+<link rel="stylesheet" type="text/css" href="Css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=2.0">
+<meta charset="UTF-8">
+</head>
+
+<body id="content" ng-app="weatherApp" ng-controller="weatherCtrl" ng-style="weatherBackground">
+<div id="load"> </div>
+<header>
+	<div class="header-element">
+    	<div class="container">
+        	<div class="row">
+               	<div class="col-sm-12">
+        			<h1 class="text-center"> Current location weather </h1>
+         		</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+	<div class="section-element">
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-sm-12">
+                	<div class="text-left">
+                	
+                    
+                    <button ng-if="checktype==true" class="btn btn-primary font-access font-access1" > {{cTemp}}  </button>
+                    <button ng-if="checktype==false" class="btn btn-primary font-access font-access1" > {{fTemp}}  </button>
+                    <a ng-click=trail()><input type="checkbox" data-toggle="toggle" data-size="small" data-on="Celcius" data-off="Farenheit" ng-checked="true" data-onstyle="success" data-offstyle="danger"></a>
+                    <button class="btn btn-primary font-access">{{description | uppercase}} <img ng-src="{{icon}}" /></button>
+                    <button class="btn btn-primary font-access">Speed: {{speed}}</button>
+                    <button class="btn btn-primary font-access">Location: {{location}}</button>
+                    <button class="btn btn-primary font-access">Humidity: {{humidity}}</button>
+                    </div>
+				</div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="text-right" style="position: fixed; right: 0; bottom: 0;"> வினோத் </footer>
+</body>
+</html>
