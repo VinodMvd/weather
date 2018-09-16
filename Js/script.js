@@ -30,14 +30,14 @@ app.controller('weatherCtrl', function($scope, $http){
 				url: openWeatherUrl
 			}).then(function(data){
 				console.log(openWeatherUrl);
-				vm.description = data.data.list[1].weather[0].description;
-				vm.speed = (2.237*data.data.list[1].wind.speed).toFixed(1)+"Mph";
-				vm.location = data.data.list[1].name;
-				vm.temp=data.data.list[1].main.temp;
+				vm.description = data.data.list[2].weather[0].description;
+				vm.speed = (2.237*data.data.list[2].wind.speed).toFixed(1)+"Mph";
+				vm.location = data.data.list[2].name;
+				vm.temp=data.data.list[2].main.temp;
 				vm.fTemp = (vm.temp*(9/5)-459.67).toFixed(1)+"°F";
 				vm.cTemp = (vm.temp-273).toFixed(1)+"°C";
-				vm.humidity = data.data.list[1].main.humidity;
-				vm.icon = "https://openweathermap.org/img/w/"+data.data.list[1].weather[0].icon+".png";
+				vm.humidity = data.data.list[2].main.humidity;
+				vm.icon = "https://openweathermap.org/img/w/"+data.data.list[2].weather[0].icon+".png";
 				
 				switch(vm.description){
 					case ('scattered clouds'):{
@@ -80,7 +80,7 @@ app.controller('weatherCtrl', function($scope, $http){
 						}
 					break;
 					}
-						case ('overcast clouds'):{
+					case ('overcast clouds'):{
 						vm.weatherBackground = {
 							"background": "url('Images/Overcast Clouds.jpg')",
 							"background-size": "cover",
