@@ -42,7 +42,31 @@ app.controller('weatherCtrl', function($scope, $http){
 				switch(vm.description){
 					case ('scattered clouds'):{
 						vm.weatherBackground = {
-							"background": "url('Images/Scattered clouds.jpg')",
+							"background": "url('Images/Scattered Clouds.jpg')",
+							"background-size": "cover",
+							"background-repeat": "no-repeat"
+						}
+					break;
+					}
+					case ('haze'):{
+						vm.weatherBackground = {
+							"background": "url('Images/Haze.jpg')",
+							"background-size": "cover",
+							"background-repeat": "no-repeat"
+						}
+					break;
+					}
+					case ('light intensity drizzle'):{
+						vm.weatherBackground = {
+							"background": "url('Images/Rain.jpg')",
+							"background-size": "cover",
+							"background-repeat": "no-repeat"
+						}
+					break;
+					}
+					case ('thunderstrom with rain'):{
+						vm.weatherBackground = {
+							"background": "url('Images/Thunderstrom With Rain.jpg')",
 							"background-size": "cover",
 							"background-repeat": "no-repeat"
 						}
