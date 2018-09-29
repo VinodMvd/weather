@@ -47,7 +47,7 @@ app.controller('weatherCtrl', function($scope, $http){
 				url: openWeatherUrl
 			}).then(function(data){
 				console.log(openWeatherUrl);
-				vm.description = "scattered clouds";
+				vm.description = data.data.list[0].weather[0].description;
 				vm.speed = (2.237*data.data.list[0].wind.speed).toFixed(1)+"Mph";
 				vm.location = data.data.list[0].name;
 				vm.temp=data.data.list[0].main.temp;
