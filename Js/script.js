@@ -59,7 +59,7 @@ app.controller('weatherCtrl', function($scope, $http){
 				switch(vm.description){
 					case ('scattered clouds'):{
 						vm.weatherBackground = {
-							"background": "url('Images/Scattered clouds.jpg')",
+							"background": "url('Images/Scattered Clouds.jpg')",
 							"background-size": "cover",
 							"background-repeat": "no-repeat"
 						}
