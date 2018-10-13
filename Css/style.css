@@ -1,3 +1,10 @@
+.head-style{
+	color: #1b61ff96;
+    background: #e2dddd;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 11px;
+}
 .font-access{
 	font-size: 20px;
 	cursor: auto;
